@@ -1,0 +1,75 @@
+.breadcrumb__list {
+  display: flex;
+  list-style: none;
+  flex-direction: row;
+  justify-content: flex-start;
+  margin-top: 0;
+
+  .breadcrumb__list-item {
+    a {
+      @include regular14;
+      color: $menu_color;
+    }
+    &:not(:last-child)::after{
+      content: "";
+      display: inline-block;
+      background: url("/img/arrow-down.png") center center no-repeat;
+      transform: rotate(270deg);
+      width: 15px;
+      height: 15px;
+      margin:0 15px;
+      vertical-align: -15%;
+    }
+    &:last-child {
+      a {
+        color: $color_daimler_blue;
+      }
+    }
+  }
+}
+
+.pagination_container{
+  width: 100%;
+  margin-bottom: 60px;
+  margin-top: 24px;
+}
+.pagination{
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  .item:not(:first-child){
+    margin-left: 8px;
+  }
+}
+.pagination_prev, .pagination_next{
+  &:before{
+    content: "";
+    display: block;
+    width: 20px;
+    height: 20px;
+    background: url("/img/arrow-down.png") center center no-repeat;
+  }
+}
+.pagination_prev:before{
+  transform: rotate(90deg);
+}
+.pagination_next:before{
+  transform: rotate(270deg);
+}
+.pagination_item{
+  @include demi14;
+  padding: 10px 10px;
+  &.active{
+    background: #000;
+    color: #fff;
+  }
+}
+@include media-breakpoint-down($mobile_version){
+  .breadcrumb{
+    display: none;
+  }
+  .pagination_container{
+    display: flex;
+    justify-content: center;
+  }
+}

@@ -1,0 +1,62 @@
+//Библиотеки
+@import "~normalize.css/normalize.css";
+@import "~bootstrap/scss/bootstrap-grid";
+@import "~animate.css/animate.css";
+@import "~@fancyapps/fancybox/dist/jquery.fancybox.min.css";
+/**
+  * startr
+ */
+@import "mixins";
+@import "fonts";
+@import "variables";
+@import "mixins2";
+@import "base";
+@import "special_car";
+@import "chunk/header";
+@import "chunk/carousel";
+@import "chunk/modal";
+@import "chunk/input_group";
+@import "chunk/select";
+
+/**
+ * Страницы контента
+ */
+@import "manycars";
+@import "contacts";
+@import "view_car";
+@import "special-perf";
+@import "special_page";
+
+//@include media-breakpoint-down($mobile_version){
+//  .main-content {
+//    margin-left: 0;
+//    margin-right: 0;
+//    margin-top: 0;
+//  }
+//  .row{
+//    margin: 0;
+//  }
+//  .main-content__row{
+//    margin: 0;
+//  }
+//  .main-content__sidebar{
+//    padding: 0;
+//  }
+//  .main-content__data{
+//    padding: 0;
+//  }
+//}
+.animated {
+  -webkit-animation-duration: .6s;
+  -o-animation-duration: .6s;
+  -moz-animation-duration: .6s;
+  animation-duration: .6s;
+
+  -webkit-animation-delay: 1s;
+  -o-animation-delay: 1s;
+  -moz-animation-delay: 1s;
+  animation-delay: 1s;
+}
+
+@import "chunk/footer";
+@import "custom";

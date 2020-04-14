@@ -1,0 +1,115 @@
+.special__block__left{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.special__block__right{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  .btn{
+    align-self: flex-end;
+  }
+}
+
+.special__block__head{
+  @include caregular30;
+  color:#fff;
+  margin-top: 0;
+  margin-bottom: 22px;
+}
+.special__block__text{
+  @include light21;
+  color: #fff;
+  margin-bottom: 0;
+}
+.special__block__cars{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 50px 0;
+}
+.special__block_car-item{
+  flex-basis: 17%;
+  text-align: center;
+  background-color: #fff;
+}
+.special__block_car-item_img{
+  min-height: 124px;
+  position: relative;
+  &::before{
+    position: absolute;
+    content:url("/img/special_vigoda.png");
+    top: -10%;
+    left: -5px;
+  }
+  img{
+    width: 100%;
+  }
+}
+.special__block_car-item__content{
+  min-height: 90px;
+}
+.special__block_car-item_header{
+  display: block;
+  @include caregular18;
+  color: #000;
+}
+.special__block_car-item_greyblock{
+  padding: 20px 0;
+  background-image: radial-gradient(circle,#fdfdfd,#f0f0f0);
+  span,strong{
+    display: block;
+    color: $color_daimler_blue;
+  }
+  span{
+    @include regular14;
+  }
+  strong{
+    @include demi18;
+  }
+}
+.special__block_car-item_price{
+  @include regular14;
+}
+.special__block_car-item_btn{
+  margin: 10px;
+  min-width: 90%;
+  max-width: 100%;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  @include btn_before_relative;
+}
+.special__block__present_text{
+  @include light21;
+  color: #fff;
+}
+.special__block__present_list{
+  @include light21;
+  color: #fff;
+}
+@include media-breakpoint-down($mobile_version){
+  .special__block__head{
+    @include caregular18;
+    text-align: center;
+  }
+  .special__block__text{
+    @include light16;
+    text-align: center;
+  }
+  .special__block__right{
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 19px;
+  }
+  .special__block__cars{
+    flex-direction: column;
+    padding: 0 50px;
+  }
+  .special__block_car-item:not(:last-child){
+    margin-bottom: 30px;
+  }
+  .special__block__present_text,.special__block__present_list{
+    @include light16;
+  }
+}

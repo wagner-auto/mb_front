@@ -1,0 +1,131 @@
+.showcase__block {
+    color: #fff;
+}
+
+.showcase__block_head {
+    @include caregular30;
+    margin-top: 0;
+}
+
+.showcase__block_text {
+    @include light21;
+    color: inherit;
+}
+
+.showcase__block_top__column {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.showcase__block_top {
+    margin-bottom: 20px;
+}
+
+.special__car {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.special__car-item {
+    flex-basis: 17%;
+    margin-bottom: 30px;
+    background-color: #fff;
+    padding-top: 26px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.special__car-item_header {
+    @include caregular18;
+    color: #000;
+    padding-left: 26px;
+    padding-right: 26px;
+    margin: 0 0 5px;
+    min-height: 40px;
+}
+
+.special__car-item_price {
+    @include regular14;
+    color: #000;
+    padding-left: 26px;
+    padding-right: 26px;
+}
+
+.special__car-item_block {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 11px;
+
+    span {
+        display: block;
+        @include regular14;
+
+        strong {
+            @include regular18;
+        }
+    }
+}
+
+.special__car-item_img {
+    margin: 13px 0;
+    border-bottom: 1px solid #ededed;
+    min-height: 121px;
+
+    img {
+        width: 100%;
+    }
+}
+
+.special__car-item_link {
+    padding: 0 26px;
+    color: $color_daimler_blue;
+}
+
+.special__car-item_btn {
+    width: 100%;
+    position: relative;
+
+    &::before {
+        position: absolute;
+        left: 10px;
+    }
+}
+
+@include media-breakpoint-down($mobile_version) {
+    .showcase__block_text, .showcase__block_head {
+        text-align: center;
+    }
+    .showcase__block_head {
+        @include caregular18;
+    }
+
+    .showcase__block_text {
+        @include light16;
+    }
+    .showcase__block_top__column {
+        padding: 0;
+
+        &:last-child {
+            padding-left: 30px;
+            padding-right: 30px;
+        }
+
+        .btn {
+            margin-top: 20px;
+        }
+    }
+    .special__car {
+        margin-top: 40px;
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+    .special__car-item {
+        flex-basis: 100%;
+    }
+}

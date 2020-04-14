@@ -1,0 +1,38 @@
+.fancybox-container{
+  z-index: 1000;
+}
+.modal__kredit{
+  .select2-container--default .select2-selection--single{
+    background-color: #f8f8f8;
+    border-color: #dee1e3;
+    .select2-selection__rendered{
+      color: #000;
+    }
+  }
+  .input__inline{
+    width: 100%;
+  }
+}
+.modal__window{
+  display: none;
+  min-width: 600px;
+  max-width: 80%;
+  .main-content__h1{
+    text-align: center;
+  }
+}
+.modal__label{
+  @include regular16;
+  color:#808890;
+}
+
+.form__line{
+  margin-bottom: 20px;
+}
+@include media-breakpoint-down($mobile_version){
+  .modal__kredit{
+    div{
+      margin-bottom: 5px;
+    }
+  }
+}

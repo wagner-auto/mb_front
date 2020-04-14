@@ -1,0 +1,124 @@
+.contacts__block{
+  color: #fff;
+}
+.contacts__block_header{
+  @include caregular30;
+  margin-top: 0;
+}
+.contacts__block_text{
+  @include caregular18;
+  color: inherit;
+}
+
+.contact__img {
+  width: 100%;
+}
+
+.contact__h2, .contact__item {
+  margin-bottom: 18px;
+}
+
+.contact__item {
+  display: block;
+  color: inherit;
+  @include regular16;
+
+  &.icon_map {
+    @include before_contact_icon("/img/map_jakor.png"){
+      float: left;
+    }
+  }
+
+  &.icon_phone {
+    @include before_contact_icon("/img/phone.png") {
+      transform: rotate(40deg);
+    }
+  }
+
+  &.icon__email {
+    @include before_contact_icon("/img/contact_email.png");
+  }
+
+  &.icon__logo {
+    @include before_contact_icon("/img/contact_logo.png"){
+      float: left;
+    }
+  }
+
+  &.icon__hours {
+    @include before_contact_icon("/img/contact_hour.png"){
+      float: left;
+    }
+    margin-top:initial;
+
+  }
+}
+.contacts__block__item{
+  margin-top: 35px;
+}
+.contacts__block__link{
+  @include link_with_right_arrow;
+}
+.contacts__block__button_group{
+  display: flex;
+  align-items: center;
+}
+span, p {
+  &.contact__item {
+    color: #ffffff;
+  }
+}
+
+p.contact__item {
+  margin-top: 40px;
+
+  a {
+    color: $color_daimler_blue;
+  }
+}
+
+a.contact__item {
+  color: $color_daimler_blue;
+}
+.contact__view_map{
+  display: none;
+}
+
+@include media-breakpoint-down($mobile_version) {
+  .contacts__block_text,.contacts__block_header{
+    text-align: center;
+  }
+  .contacts__block_header{
+    @include caregular18;
+  }
+  .contacts__block_text{
+    @include caregular16;
+    display: block;
+    margin: 0px auto 24px auto;
+    width: 80%;
+  }
+  .contact__view_map{
+    display: inline-block;
+    @include demi14;
+    color: $color_daimler_blue;
+    border-bottom: 1px solid $color_daimler_blue;
+  }
+  .contact__map{
+    display: none;
+    &.open{
+      display: block;
+    }
+  }
+  .contacts__block__item{
+    span,a,p{
+      @include regular14;
+    }
+    &:last-child{
+      margin-top: 0;
+    }
+  }
+  .contacts__block__button_group{
+    justify-content: center;
+    margin-top: 25px;
+  }
+}

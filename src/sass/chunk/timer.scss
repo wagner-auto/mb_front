@@ -1,0 +1,22 @@
+.carousel__item-timer_time {
+  .wrapper {
+    color: #fff;
+    position: relative;
+    height: 130px;
+
+    svg {
+      g{
+        text{
+          fill:#fff;
+        }
+        > text.time {
+          @include regular48;
+          color: #fff;
+        }
+        > text.text{
+          @include regular16;
+        }
+      }
+    }
+  }
+}

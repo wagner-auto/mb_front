@@ -1,0 +1,185 @@
+@import "model";
+.view_car{}
+.view_car__presentation_grid{
+  div[class^=col-]{
+    padding: 0;
+  }
+}
+.view_car__presentation{
+  color: #fff;
+}
+.view_car__presentation_head{
+  @include caregular30;
+}
+.view_car_presentation_text{
+  @include light21;
+  color: #ffffff;
+}
+.view_car__presentation-second_text{
+  @include regular16;
+  color: #fff;
+  line-height: 1.5;
+  padding: 0 20px;
+}
+.view_car__presentation_block{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.view_car__presentation_model__button{
+  button,a{
+    width: 100%;
+    margin-top: 20px;
+    text-align: center;
+    @include btn_before_relative;
+  }
+}
+.car-in-park{
+  padding-bottom: 80px;
+}
+.view_car__slider{
+  padding-left: 35px;
+}
+.car-in-park-head{
+  @include caregular30;
+  color: #fff;
+}
+.car-in-park-showcase{
+  .showcase__item{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: #fff;
+    margin-bottom: 20px;
+    padding: 20px;
+    .showcase__item_name{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+    .showcase__item_name-text{
+      @include caregular24;
+      color:$color_daimler_blue;
+    }
+    .showcase__item_image{
+      //flex-basis: 30%;
+    }
+    .showcase__item_name{
+      flex-basis: 30%;
+    }
+    .showcase__item_price{
+      flex-basis: 40%;
+    }
+    .showcase__item_price_bottom{
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      .model__right-block{
+        &:first-child{
+          margin-right: 15px;
+        }
+        margin-bottom: 0;
+      }
+    }
+  }
+}
+.showcase__block_view-more{
+  margin-top: 40px;
+}
+.view-more{
+  width: 100%;
+  @include btn_before_relative;
+}
+
+.preference__block{
+  color: #fff;
+}
+
+.preference__block-head{
+  @include caregular30;
+}
+.preference__block-subhead{
+  @include caregular24;
+  margin-top: 0px;
+  margin-bottom: 52px;
+}
+.preference__block-text{
+  @include regular16;
+  line-height: 1.5;
+  color: #fff;
+}
+.preference__block-callback{
+  margin-top:52px
+}
+@include media-breakpoint-down($mobile_version){
+  .view_car__presentation_head{
+    @include caregular18;
+  }
+  .view_car_presentation_text{
+    @include light16;
+  }
+  .view_car__presentation_grid{
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  .view_car__slider{
+    padding: 0 0 30px;
+  }
+  .model__right-block{
+    margin-bottom: 5px;
+  }
+  .view_car__presentation-second_text{
+    @include regular14;
+  }
+  .view_car__presentation_model__button{
+    .btn{
+      padding: 8px 15px;
+    }
+    button,a{
+      @include regular14;
+    }
+  }
+  .view_car{
+    padding-bottom: 15px;
+  }
+  .car-in-park-head{
+    margin-top: 0;
+    @include caregular18;
+  }
+  .car-in-park-showcase{
+    .showcase__item{
+      flex-direction: column;
+      .showcase__item_name-text{
+        text-align: center;
+      }
+      .showcase__item_price_bottom{
+        flex-direction: column;
+        .model__right-block{
+          &:first-child{
+            margin-right: 0;
+            margin-bottom: 5px;
+          }
+        }
+      }
+    }
+  }
+
+  .preference__block-head{
+    @include caregular18;
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  .preference__block-subhead{
+    @include caregular16;
+    text-align: center;
+    margin-bottom: 15px;
+  }
+  .preference__block-text{
+    @include regular14;
+  }
+  .preference__block-callback{
+    width: 100%;
+    @include btn_before_relative;
+    margin: 20px 0;
+  }
+}

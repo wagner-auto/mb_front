@@ -1,0 +1,42 @@
+.promo__form__img{
+  width: 100%;
+  height: 100%;
+}
+.promo__form__header{
+  @include caregular30;
+  margin-bottom: 24px;
+}
+.promo__form__text{
+  @include light14;
+}
+.sub__container{
+  max-width: 80%;
+}
+.promo__form__form{
+  max-width: 80%;
+}
+@include media-breakpoint-down($mobile_version){
+  .promo__form__block{
+    .promo_block__container{
+      padding: 30px 20px;
+    }
+  }
+  .sub__container{
+    max-width: 100%;
+  }
+  .promo__form__header{
+    @include caregular18;
+    margin-top: 0;
+  }
+  .promo__form__text{
+    @include light14;
+  }
+  .promo__form__form{
+    max-width: 100%;
+  }
+}
+@media all and (max-width: 1450px) {
+  .promo__form__header{
+    margin-top: 7px;
+  }
+}

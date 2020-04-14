@@ -1,0 +1,147 @@
+@mixin regular12 {
+  font-family: CSRegular;
+  font-size: 12px;
+}
+@mixin regular14 {
+  font-family: CSRegular;
+  font-size: 14px;
+}
+
+@mixin regular16 {
+  font-family: CSRegular;
+  font-size: 16px;
+}
+@mixin regular18 {
+  font-family: CSRegular;
+  font-size: 18px;
+}
+
+@mixin regular21{
+  font-family: CSRegular;
+  font-size: 21px;
+}
+@mixin regular48{
+  font-family: CSRegular;
+  font-size: 48px;
+}
+@mixin caregular18 {
+  font-family: CARegular;
+  font-size: 18px;
+}
+
+@mixin caregular16 {
+  font-family: CARegular;
+  font-size: 16px;
+}
+
+@mixin caregular24 {
+  font-family: CARegular;
+  font-size: 24px;
+}
+
+@mixin caregular30 {
+  font-family: CARegular;
+  font-size: 30px;
+}
+
+@mixin caregular42{
+  font-family: CARegular;
+  font-size: 42px;
+}
+@mixin demi20 {
+  font-family: CSDemi;
+  font-size: 20px;
+}
+
+@mixin demi18 {
+  font-family: CSDemi;
+  font-size: 18px;
+}
+
+@mixin demi16 {
+  font-family: CSDemi;
+  font-size: 16px;
+}
+
+@mixin demi14 {
+  font-family: CSDemi;
+  font-size: 14px;
+}
+
+@mixin light16 {
+  font-family: CSLight;
+  font-size: 16px;
+}
+@mixin light14 {
+  font-family: CSLight;
+  font-size: 14px;
+}
+@mixin light21{
+  font-family: CSLight;
+  font-size: 21px;
+}
+
+@mixin link_with_right_arrow {
+  display: block;
+  color: $color_daimler_blue;
+  @include regular16;
+  &:hover {
+    font-weight: bold;
+  }
+  &:before {
+    display: inline-block;
+    content: url("/img/arrow-right-blue.png");
+    margin-right: 8px;
+    vertical-align: -15%;
+  }
+}
+
+@mixin select2__item {
+  @include regular16;
+  color: #000000;
+  padding: 5px 10px;
+}
+
+//Миксин для IE11 и гридов
+@mixin grid_view {
+  display: grid;
+  display: -ms-grid;
+}
+
+@mixin grid_columns($repeat, $edizm) {
+  $result: $edizm;
+  @for $i from 2 through $repeat {
+    $result: $result+' '+$edizm;
+  }
+  grid-template-columns: repeat($repeat, $edizm);
+  -ms-grid-columns: #{$result};
+}
+
+@mixin btn_before_relative {
+  position: relative;
+  &::before {
+    position: absolute;
+    left: 15px;
+  }
+}
+
+@mixin disclaimer {
+  color: $disclaimer_grey;
+  @include regular14;
+}
+
+@mixin before_contact_icon($url){
+  &::before{
+    display: inline-block;
+    content:url($url);
+    vertical-align: -10%;
+    margin-right: 15px;
+    @content;
+  }
+}
+
+@mixin media_fucking_ie{
+  @media screen and (-ms-high-contrast:active), (-ms-high-contrast:none) {
+    @content;
+  }
+}

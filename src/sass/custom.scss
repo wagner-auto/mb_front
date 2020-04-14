@@ -1,0 +1,43 @@
+.hidden{
+    visibility: hidden;
+    height: 0!important;
+    margin: 0!important;
+    padding: 0!important;
+}
+@media (max-width:1199.98px){
+    .modal__window{
+        min-width: 80%;
+    }
+}
+.modal__promotion{
+    max-width: 715px;
+}
+.modal__promotion .modal__image{
+    max-width: 715px;
+}
+.modal__image img{
+    width: 100%;
+}
+.modal__promotion .list-inline{
+    margin-left: 15px;
+}
+.list-inline-item a{
+    color:#00adef;
+}
+.table-component table{
+    border-collapse: collapse;
+    width: 100%;
+    border:none;
+}
+
+.table-component table tr::nth-child(2) td,.table-component table tr:first-child th{
+    border-top: 1px solid #bdbdbd;
+}
+.table-component table tr td{
+    border-bottom: 1px solid #bdbdbd;
+}
+.table-component table td, .table-component table th{
+    padding: 20px 6px;
+    font-family: CSRegular;
+    font-size: 16px;
+}

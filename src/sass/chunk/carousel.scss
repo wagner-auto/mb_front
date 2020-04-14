@@ -1,0 +1,220 @@
+@import "~owl.carousel/src/scss/owl.carousel";
+@import "~owl.carousel/src/scss/owl.theme.default";
+
+.carousel.owl-theme, .carousel_thumb.owl-theme {
+  position: relative;
+
+  .owl-dots {
+    position: absolute;
+    width: 100%;
+    height: 10px;
+    bottom: 24px;
+
+    .owl-dot {
+      span {
+        height: 3px;
+        width: 50px;
+        background: #ffffff;
+      }
+
+      &.active {
+        span {
+          background: $color_daimler_blue;
+        }
+      }
+    }
+  }
+}
+.carousel_thumb.owl-theme{
+  .owl-dots{
+    bottom: unset;
+    top:280px;
+  }
+}
+
+.owl-thumbs {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+  .owl-thumb-item {
+    flex-basis: auto;
+    margin-top: 10px;
+    margin-left: 5px;
+
+    img {
+      width: 100%;
+      height: 100%;
+    }
+
+    &:first-child {
+      margin-left: 0;
+    }
+
+    &.active {
+      img{
+        border: $color_daimler_blue 1px solid;
+      }
+    }
+
+  }
+}
+
+.carousel__item {
+  position: relative;
+  width: 100%;
+  img {
+    min-height: 327px;
+  }
+}
+.car__carousel,.service_carousel{
+  .owl-dots{
+    display: none;
+  }
+}
+.car__carousel-description{
+  position: absolute;
+  left: 200px;
+  top: 130px;
+  color: #fff;
+}
+.car__carousel-description_head{
+  @include caregular42;
+  margin-bottom: 25px;
+}
+.car__carousel-description_text{
+  @include caregular24;
+  margin-bottom: 35px;
+  color: #ffffff;
+}
+.carousel__item-description {
+  position: absolute;
+  top: 20%;
+  left: 12%;
+  color: #ffffff;
+  width: 500px;
+}
+
+.carousel__item-h2 {
+  @include caregular42;
+  font-weight: unset;
+  margin: 34px 0 25px;
+}
+
+.carousel__item-text {
+  @include caregular24;
+  margin: 0 0 5px 0;
+  line-height: 1.5;
+  width: 70%;
+  color: #ffffff;
+
+  strong {
+    line-height: 1.5;
+    font-family: CSDemi;
+  }
+}
+
+.carousel__item-timer{
+  position: absolute;
+  bottom: 10%;
+  left: 12%;
+  width: 420px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+.carousel__item-timer_text{
+  @include caregular18;
+  color: #fff;
+}
+@import "timer";
+.carousel__btn {
+  display: inline-block;
+  padding: 8px 12px;
+  font-size: 16px;
+}
+
+.carousel__horizontal_line {
+  display: block;
+  width: 100px;
+  border-bottom: #ffffff 3px solid;
+}
+
+.carousel__disclaimer {
+  display: block;
+  text-align: center;
+  @include regular14;
+  color: $disclaimer_grey;
+  margin-top: 10px;
+}
+
+@include media-breakpoint-down($mobile_version) {
+  .car__carousel,.service_carousel{
+    .carousel__item{
+      padding: 0;
+    }
+  }
+  .service_carousel{
+    .car__carousel-description{
+      top:5px;
+    }
+  }
+  .car__carousel-description{
+    top:0;
+    left: 10px;
+    .btn{
+      @include regular12;
+      padding: 5px 10px;
+    }
+  }
+  .car__carousel-description_head{
+    @include caregular24;
+    margin-bottom: 0;
+  }
+  .car__carousel-description_text{
+    @include caregular16;
+    margin-top: 0;
+    margin-bottom: 10px;
+  }
+
+  .carousel.owl-theme .owl-dots, .carousel_thumb.owl-theme .owl-dots{
+    bottom: -15px;
+  }
+  .carousel__item {
+    position: initial;
+    padding: 10px 0;
+    display: flex;
+    flex-direction: column;
+    img {
+      min-height: auto;
+    }
+  }
+  .carousel__horizontal_line{
+    width: 42px;
+    border-bottom-width: 2px;
+  }
+  .carousel__item-description, .carousel__item-timer{
+    position: initial;
+    padding: 0 20px;
+  }
+  .carousel__item-h2 {
+    @include caregular18;
+    margin-bottom: 5px;
+    margin-top: 20px;
+  }
+  .carousel__item-text {
+    @include regular14;
+    display: block;
+  }
+  .carousel__btn {
+    font-size: 12px;
+  }
+  .carousel__item-timer{
+    width: auto;
+  }
+  .carousel__item-timer_text{
+    @include regular14;
+  }
+
+}

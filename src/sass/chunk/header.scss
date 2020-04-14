@@ -1,0 +1,90 @@
+.header {
+  display: block;
+  background-color: #000;
+
+}
+.header_left__logo {
+  display: block;
+  margin: 20px 0;
+}
+
+.header_right__link {
+  display: flex;
+  justify-content: flex-end;
+  padding: 10px 0 0 0;
+  height: 25px;
+}
+.header_right__bottom{
+  margin-top: 17px;
+}
+.header_right__button-box{
+  padding: 0px;
+  display: flex;
+  justify-content: flex-end;
+}
+.header_right__button-blue{
+  max-height: 40px;
+}
+.header_right__bottom-description{
+  @include light16;
+  padding: 0;
+  display: flex;
+  color: #ffffff;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-end;
+  span{
+    color: #fff;
+  }
+}
+.header_right__bottom-contact{
+  display: block;
+}
+.header_right__bottom_link{
+  color: #ffffff;
+  margin-left: 12px;
+  &.phone::before{
+    content:url("/img/phone.png");
+    vertical-align: -10%;
+    margin-right: 5px;
+  }
+  &.map::before{
+    vertical-align: -10%;
+    content: url("/img/map_jakor.png");
+    margin-right: 5px;
+  }
+}
+.header_right__mobile{
+  display: none;
+}
+@media all and (max-width:1400px){
+.header_right__link{
+  padding-right: 15px;
+}
+  .header_right__button-blue{
+    margin-right: 15px;
+  }
+}
+@include media-breakpoint-down($mobile_version){
+  .header_right__mobile{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+  }
+  .header{
+    z-index: 5;
+    display: flex;
+    flex-direction: row;
+  }
+  .header__container{
+    flex-basis: 60%;
+  }
+  .header_left__logo{
+    margin: 12px 0;
+    img{
+      width: 100%;
+      max-width: 261px
+    }
+  }
+}
